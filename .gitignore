@@ -1,0 +1,6 @@
+# Build related files
+target/
+
+# Files related to solving the problem
+output/
+input.txt
