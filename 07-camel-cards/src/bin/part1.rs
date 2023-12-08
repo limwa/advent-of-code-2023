@@ -48,11 +48,9 @@ fn determine_play_kind(play: &Play) -> PlayKind {
     let mut fours = 0;
     let mut threes = 0;
     let mut twos = 0;
-    let mut ones = 0;
 
     for (_, &count) in map.iter() {
         match count {
-            1 => ones += 1,
             2 => twos += 1,
             3 => threes += 1,
             4 => fours += 1,
