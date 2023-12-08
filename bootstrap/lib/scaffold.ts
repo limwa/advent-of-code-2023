@@ -50,6 +50,8 @@ export async function scaffoldRustProject(puzzle: Puzzle, options?: ScaffoldOpti
         console.log("Overwriting input.txt...");
     }
 
+    Deno.mkdirSync(`${folderName}/examples/`, { recursive: true });
+    
     Deno.mkdirSync(`${folderName}/src/bin/`, { recursive: true });
     for (const part of puzzle.parts) {
         writeIfNotExists(`${folderName}/src/bin/${part.id}.rs`, `fn main() {\n    println!("Hello from ${part.id}");\n}`);
